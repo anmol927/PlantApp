@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    tools:context=".Next">
+
+    <TextView
+        android:id="@+id/dish_count"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="     \n0"
+        app:layout_constraintBottom_toTopOf="@+id/dish_cartbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dish_price" />
+
+    <ImageView
+        android:id="@+id/dish_pic"
+        android:layout_width="379dp"
+        android:layout_height="311dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"
+        app:srcCompat="@drawable/asiafood2" />
+
+    <ImageView
+        android:id="@+id/dish_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:onClick="incrementCount"
+        app:layout_constraintBottom_toBottomOf="@+id/dish_count"
+        app:layout_constraintEnd_toStartOf="@+id/dish_count"
+        app:layout_constraintHorizontal_bias="0.372"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dish_name"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_group_401" />
+
+    <ImageView
+        android:id="@+id/dish_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="decrementCount"
+        app:layout_constraintBottom_toBottomOf="@+id/dish_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toEndOf="@+id/dish_count"
+        app:layout_constraintTop_toBottomOf="@+id/dish_name"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_group_400" />
+
+    <TextView
+        android:id="@+id/dish_name"
+        android:layout_width="190dp"
+        android:layout_height="34dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dish_pic"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <ImageView
+        android:id="@+id/dish_cartbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addToCart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dish_pic"
+        app:layout_constraintVertical_bias="0.773"
+        app:srcCompat="@drawable/ic_group_1675" />
+
+    <TextView
+        android:id="@+id/dish_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dish_name" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_cart"
+        android:layout_width="61dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:clickable="true"
+        android:onClick="launchCart"
+        app:layout_constraintBottom_toTopOf="@+id/dish_minus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toEndOf="@+id/dish_price"
+        app:layout_constraintTop_toBottomOf="@+id/dish_pic"
+        app:layout_constraintVertical_bias="0.709"
+        app:srcCompat="@drawable/ic_baseline_shopping_cart_27" />
+</androidx.constraintlayout.widget.ConstraintLayout>
